@@ -1,8 +1,14 @@
 <template>
   <div class="p-6 max-w-md mx-auto bg-white rounded-xl shadow-md">
+   <router-link to="/" class="link link-info">Volver a la página principal</router-link>
     <h2 class="text-2xl font-bold mb-4">Seleccionar Día</h2>
     <ul>
-      <li v-for="dia in dias" :key="dia" @click="selectDia(dia)" class="cursor-pointer mb-2">
+      <li
+        v-for="dia in dias"
+        :key="dia"
+        @click="selectDia(dia)"
+        class="cursor-pointer mb-2 p-2 rounded-md transition-colors duration-200 hover:text-blue-700 hover:bg-blue-50"
+      >
         {{ dia }}
       </li>
     </ul>
@@ -26,7 +32,5 @@ export default {
 </script>
 
 <style scoped>
-li:hover {
-  color: blue;
-}
+/* No se necesita CSS adicional, ya que Tailwind cubre todos los estilos necesarios */
 </style>

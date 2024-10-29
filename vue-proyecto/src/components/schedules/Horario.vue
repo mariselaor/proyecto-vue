@@ -1,7 +1,8 @@
 <template>
-  <div>
-    <h2>{{ day }}</h2>
-    <table>
+  <div class="p-6 max-w-2xl mx-auto bg-base-100 rounded-xl shadow-lg">
+    <router-link to="/days" class="link link-info mb-4">Volver a la página principal</router-link>
+    <h2 class="text-2xl font-bold text-primary mb-4">{{ day }}</h2>
+    <table class="table table-zebra w-full">
       <thead>
         <tr>
           <th>Asignatura</th>
@@ -21,7 +22,7 @@
         </tr>
       </tbody>
     </table>
-    <p v-if="clasesFiltradas.length === 0">No hay clases programadas para este día.</p>
+    <p v-if="clasesFiltradas.length === 0" class="mt-4 text-red-500">No hay clases programadas para este día.</p>
   </div>
 </template>
 
@@ -70,24 +71,4 @@ export default {
 </script>
 
 <style scoped>
-h2 {
-  font-size: 1.5em;
-  margin-bottom: 20px;
-}
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-th,
-td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
-th {
-  background-color: #f2f2f2;
-}
-p {
-  color: red;
-}
 </style>
